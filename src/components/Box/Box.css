@@ -1,0 +1,104 @@
+
+.box{
+    display: flex;
+    position: relative;
+    overflow: visible;
+    border-radius: 7px 7px 0 0;
+    z-index: 100000;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: auto;
+    padding: 0;
+    background-color: var(--teste);
+    border-bottom: 1px solid rgb(228, 211, 211);
+    transition: 400ms;
+}
+
+.box:hover{
+    background-color: #74baf0;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+.box-container{
+    display: flex;
+    margin: 10px 0px;
+}
+
+.full-box{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color:none;
+    border: 1px solid;
+    border-radius: 8px;
+    border-color: rgb(228, 211, 211);
+    width: 100%;
+    transition: 400ms;
+}
+
+.full-box:hover{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color:none;
+    border: 1px solid;
+    border-radius: 8px;
+    border-color: rgb(39, 9, 172);
+    width: 100%;
+
+    transform: rotate(0.3deg);
+}
+
+
+.body-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.chart-box{
+    height: 100%;
+    width: 100%;
+}
+
+
+.icon{
+    font-size: 20px;
+    margin-right: 8px;
+    margin-left: 8px;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 28px;
+    min-height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon:hover{
+    background:#3d8ac486;
+}
+
+.filter{
+    cursor: pointer;
+}
+
+
+.dnd{
+    cursor: move;
+}
+
+.more{
+    background-color: none;
+    right: 0;
+    position:absolute;
+    cursor: pointer;
+}
