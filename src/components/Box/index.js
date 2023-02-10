@@ -1,4 +1,4 @@
-import Candlestick from '../Charts/Candlestick'
+import Line from '../Charts/Line'
 import './Box.css'
 import { CiFilter } from 'react-icons/ci';
 import { MdDragIndicator, MdMoreVert } from 'react-icons/md';
@@ -9,14 +9,14 @@ function Box(props) {
             <div className='full-box '>
                 <div className="box">
                     <div className='box-container'>
-                        <div className='icon dnd drag-handle'><MdDragIndicator /></div>
+                        <div className='iconb dndb drag-handle'><MdDragIndicator /></div>
                         <div>Chart</div>
-                        <div className='icon filter'><CiFilter /></div>
-                        <div className='icon more'><MdMoreVert/></div>
+                        <div className='iconb filterb'><CiFilter /></div>
+                        <div className='iconb moreb'><MdMoreVert/></div>
                     </div>
                 </div>
                 <div className='chart-box'>
-                    <Candlestick />
+                    <Line />
                 </div>
             </div>
 

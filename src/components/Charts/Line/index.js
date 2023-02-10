@@ -1,4 +1,4 @@
-import './Candlestick.css'
+import './style.css'
 import ApexCharts from 'react-apexcharts'
 
 const options = {
@@ -6,7 +6,8 @@ const options = {
       height: 350,
       type: 'line',
       zoom: {
-        enabled: true
+        enabled: true,
+        type: "xy"
       }
     },
     dataLabels: {
@@ -24,13 +25,19 @@ const options = {
         colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
         opacity: 0.5
       },
+      padding: {
+        top: 0,
+        right: 0,
+        bottom: 10,
+        left: 0
+    },
     },
     xaxis: {
       categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
     }
   }
 
-export default function Candlestick(){
+export default function Line(){
 
     const series = [{
         name: "Desktops",

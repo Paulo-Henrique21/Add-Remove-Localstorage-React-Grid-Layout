@@ -1,11 +1,12 @@
-import "./styles.css";
+import "../OneProd/styles.css";
+import "../../rgl.css"
 import "/node_modules/react-grid-layout/css/styles.css";
 // import "/node_modules/react-resizable/css/styles.css";
 import { Responsive, WidthProvider } from "react-grid-layout";
 import { useState } from "react";
 import { nanoid } from "nanoid";
 import { useLocalStorage } from "react-use";
-import Candlestick from "../Charts/Candlestick";
+import Candlestick from "../Charts/Line";
 
 const ResponsiveRGL = WidthProvider(Responsive);
 
@@ -22,24 +23,24 @@ const getDroppableProp = (t) => ({
 });
 const Droppables = () => (
   <aside>
-    <div {...getDroppableProp("GRID")}>GRID</div>
-    <div {...getDroppableProp("CHART")}>CHART</div>
+    {/* <div {...getDroppableProp("GRID")}>GRID</div> */}
+    <div {...getDroppableProp("CHART")}>Produto unico</div>
   </aside>
 );
-export default function TesteCopy() {
+export default function TwoProd() {
   const [currBreakpoint, setCurrBreakpoint] = useState("lg");
-  const [panels, setPanels] = useLocalStorage("panels", []);
-  const [layouts, setLayouts] = useLocalStorage("layouts");
-  // console.log(panels, layouts);
+  const [panels2, setPanels2] = useLocalStorage("panels2", []);
+  const [layouts2, setLayouts2] = useLocalStorage("layouts2");
+  // console.log(panels2, layouts2);
 
-  const handleLayouts = (newLayouts) => {
-    if (!dragging) setLayouts(newLayouts);
+  const handleLayouts2 = (newLayouts2) => {
+    if (!dragging) setLayouts2(newLayouts2);
   };
 
   const handleDelete = ({ target: { id } }) => {
-    setPanels(panels.filter((panel) => panel.i !== id));
-    handleLayouts(
-      Object.entries(layouts).reduce((acc, [key, value]) => {
+    setPanels2(panels2.filter((panel) => panel.i !== id));
+    handleLayouts2(
+      Object.entries(layouts2).reduce((acc, [key, value]) => {
         return {
           ...acc,
           [key]: value.filter((layout) => layout.i !== id)
@@ -52,14 +53,14 @@ export default function TesteCopy() {
     dragging = false;
 
     if (layoutItem) {
-      setPanels([
-        ...panels,
+      setPanels2([
+        ...panels2,
         {
           ...layoutItem,
           type
         }
       ]);
-      handleLayouts({ ...layouts, [currBreakpoint]: layout });
+      handleLayouts2({ ...layouts2, [currBreakpoint]: layout });
     }
   };
 
@@ -68,47 +69,53 @@ export default function TesteCopy() {
       <Droppables />
 
       <ResponsiveRGL
-        // autoSize={false}
-        compactType="horizontal"
+        autoSize={false}
+        //compactType="vertical horizontal"
+        compactType="vertical"
         containerPadding={[10, 0]}
         draggableHandle=".draggable-handle"
-        // isBounded
+        //isBounded
         margin={[4, 4]}
         // eliminate resizing animation on component mount
         measureBeforeMount={true}
-        resizeHandles={["se", "e", "s"]}
+        resizeHandles={["se", "e", "s"]} //Representam as setas de controlar o tamanho
         rowHeight={60}
-        // LAYOUTS
-        layouts={layouts}
-        onLayoutChange={(_, newLayouts) => handleLayouts(newLayouts)}
+        // LAYOUTs2
+        layouts={layouts2}
+        onLayoutChange={(_, newLayouts2) => handleLayouts2(newLayouts2)}
         onBreakpointChange={(breakpoint) => setCurrBreakpoint(breakpoint)}
         // DROPS
         isDroppable={true}
-        droppingItem={{ i: nanoid(), w: 3, h: 4, minW: 3, minH: 2 }}
+        droppingItem={{ i: nanoid(), w: 7, h: 7, minW: 3, minH: 2 }}
         onDrop={handleDrop}
         // DRAGS
         onDragStart={() => (dragging = true)}
         onDragStop={() => (dragging = false)}
 
       >
-        {panels.map(({ i, type, ...grid }) => {
+        {panels2.map(({ i, type, ...grid }) => {
+
           return (
-            <div key={i} data-grid={grid}>
-              <header>
+            <div key={i} data-grid={grid} className='container-elementos'>
+              <header className="header-elementos">
                 <h2>{type}</h2>
                 <button className="draggable-handle">&#10021;</button>
                 <button className="delete-button" id={i} onClick={handleDelete}>
                   &#x2715;
                 </button>
-                
+
               </header>
-              <Candlestick/>
+              <div className="charts-elementos">
+                <Candlestick />
+              </div>
             </div>
-          );
+
+          )
         })}
+
       </ResponsiveRGL>
 
-      {panels.length < 1 && <em>DROP ITEMS HERE</em>}
+      {panels2.length < 1 && <em>DROP ITEMS HERE</em>}
     </>
   );
 }

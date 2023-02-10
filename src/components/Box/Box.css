@@ -25,7 +25,7 @@
 
 .box-container{
     display: flex;
-    margin: 10px 0px;
+    align-items: center;
 }
 
 .full-box{
@@ -60,8 +60,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    width: 700px;
+    height: 500px;
 }
 
 .chart-box{
@@ -70,8 +70,8 @@
 }
 
 
-.icon{
-    font-size: 20px;
+.iconb{
+    font-size: 50px;
     margin-right: 8px;
     margin-left: 8px;
     border-radius: 50%;
@@ -83,20 +83,20 @@
     justify-content: center;
 }
 
-.icon:hover{
+.iconb:hover{
     background:#3d8ac486;
 }
 
-.filter{
+.filterb{
     cursor: pointer;
 }
 
 
-.dnd{
+.dndb{
     cursor: move;
 }
 
-.more{
+.moreb{
     background-color: none;
     right: 0;
     position:absolute;

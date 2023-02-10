@@ -1,0 +1,35 @@
+.draggable-handle {
+    cursor: move;
+  }
+  
+  .react-grid-layout {
+    flex-grow: 1;
+    /* min-height: 400px; */
+    position: relative;
+    transition: height 1000ms ease;
+  }
+  .react-grid-item:not(.react-grid-placeholder) {
+    /* background: #fff;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    font-size: 20px; */
+    
+    transition: all 700ms ease;
+    transition-property: left, top;
+    border-radius: 10px;
+    
+  }
+  .react-grid-item.react-grid-placeholder {
+    background: #fff !important;
+    border: 5px dashed #2457b6;
+  }
+  .react-grid-item.resizing {
+    opacity: 0.7;
+    z-index: 3;
+
+  }
+  
+  .react-grid-item {
+    transition: all 700ms ease;
+    transition-property: left, top;
+  }
