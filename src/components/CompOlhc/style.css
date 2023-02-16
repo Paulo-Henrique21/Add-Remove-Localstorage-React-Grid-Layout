@@ -1,0 +1,211 @@
+.element_graph{
+    background-color: #343332;
+    border-radius: 10px;
+    width: "100%";
+    height: "100%"
+  
+  }
+  .container_adds{
+    margin: 1em auto;
+    width: 1000px;
+    display: flex;
+    overflow-x: scroll;
+    background-color: #343332;
+  }
+  
+  .container_adds_graph{
+    margin: 1em auto;
+    width: 1000px;
+    margin-top: 120px;
+  }
+  
+  .compar-btn-filter{
+    width: 30px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color:transparent;
+    color: #fff;
+  }
+  
+  .btn_trash{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+   
+    height:28px;
+    width:28px;
+    background: rgba(0, 0, 0, 0.301);
+    color: #FFf;
+    font-size: 18px;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    cursor: pointer;
+  }
+  
+  
+  .compar-top-elements{
+    display: flex;
+    height: 45px;
+    min-height: 45px;
+    padding: 8px 8px 8px 8px;
+    align-items: center;
+    background: #7635DC;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+  }
+  
+  
+  
+  .container_adds a{
+    width: 115px;
+    background: #FFf;
+    /* margin-top: 26px; */
+    margin: 11px;
+    padding: 15px;
+    border-radius: 14px;
+    cursor: pointer;
+    display: flex;
+  }
+  .container_adds a:hover{
+    background: #ddd;
+  }
+  .btnAds{
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 15px;
+  }
+  .btn-config{
+    margin-top: 10px; 
+      border: none;
+      border-radius: 30px;
+      height: 50px;
+      background: #fff;
+      font-size: 15px;
+      /* margin-bottom: 30px; */
+      padding: 12px;
+      /* position: relative; */
+      position: absolute;
+      margin-top: 140px;
+      cursor: pointer;
+  }
+
+  .selects-position-2{
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    border-radius: 10px;
+    background-color: #fff;
+
+    
+  }
+
+  .title-prod{
+    background-color: #a98dd4;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  .title-prod-2{
+    background-color: #a98dd4;
+  }
+  
+  .selects-1 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    border: none;
+    z-index: 1;
+    margin-left: 100px;
+    margin-top: 356px;
+    background-color: none;
+    justify-content: space-between;
+    
+    width: 140px;
+    box-shadow: 0 4px 17px 6px rgb(0 0 0 / 10%);
+  }
+  
+  .selects-1 select {
+    background-color: #fff;
+    color: #000;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .container_adds > .active{
+    background: #ddd;
+  }
+  
+  
+  .btn_Clear_Dash{
+    background: none;
+    border:none;
+    margin-left: 20px;
+  }
+  
+  
+  .container-grafico-vol{
+    height: 30%;
+    min-height: 30%;
+  }
+
+  .container-grafico-cand{
+    height: 60%;
+    min-height: 30%;
+  }
+  
+  
+  .compolhc-container-element-dnd{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  
+  
+  .btn-drag-1{
+    width: 30px;
+    font-size: 22px;
+    border: none;
+    cursor: move;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #fff;
+    transition: 400ms;
+  }
+
+  .btn-drag-1:hover{
+    color: #fff;
+  }
+
+  .compar-icon-filter{
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #fff;
+    transition: 400ms;
+  }
+  
+  .text-produto{
+    color: #fff;
+    font-size: 14px;
+    font-size-adjust: 10px;
+  }
+
