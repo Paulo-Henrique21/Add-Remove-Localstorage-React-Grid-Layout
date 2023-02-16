@@ -13,6 +13,6 @@ export default function App (){
         <Route path='/twoprod' element={<TwoProd/>}/>
         <Route path='/box' element={<Box/>}/>
       </Routes>
-    </Router>
+    </Router> 
   )
 }
